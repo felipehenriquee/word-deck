@@ -1,0 +1,10 @@
+**/bin
+**/obj
+.git
+.env
+*.db
+.vs
+.vscode
+.husky
+tests
+TestResults

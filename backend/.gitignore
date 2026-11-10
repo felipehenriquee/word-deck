@@ -1,0 +1,14 @@
+bin/
+obj/
+TestResults/
+coverage/
+*.user
+*.suo
+.vs/
+.env
+*.db
+*.db-shm
+*.db-wal
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

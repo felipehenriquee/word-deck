@@ -1,0 +1,4 @@
+#!/bin/sh
+# Ativado com: git config core.hooksPath .husky
+# Bloqueia o commit se o código não estiver formatado conforme o .editorconfig.
+dotnet format --verify-no-changes
