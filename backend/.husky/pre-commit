@@ -1,4 +1,4 @@
 #!/bin/sh
-# Ativado com: git config core.hooksPath .husky
+# No monorepo word-deck, quem roda esta checagem é o .githooks/pre-commit da raiz.
 # Bloqueia o commit se o código não estiver formatado conforme o .editorconfig.
 dotnet format --verify-no-changes

@@ -1,0 +1,17 @@
+#!/bin/sh
+# Pre-commit do monorepo: o git só aceita um diretório de hooks, então este hook
+# roda a checagem de cada projeto apenas quando há arquivos dele no commit.
+# Ativado com: git config core.hooksPath .githooks
+set -e
+root=$(git rev-parse --show-toplevel)
+staged=$(git diff --cached --name-only --diff-filter=ACMR)
+
+if echo "$staged" | grep -q '^backend/'; then
+  echo "pre-commit: backend (dotnet format)"
+  (cd "$root/backend" && dotnet format --verify-no-changes)
+fi
+
+if echo "$staged" | grep -q '^frontend/'; then
+  echo "pre-commit: frontend (lint-staged)"
+  (cd "$root/frontend" && npx --no-install lint-staged)
+fi

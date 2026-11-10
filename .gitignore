@@ -1,0 +1,6 @@
+# Configuração local do Claude Code (skills, settings)
+.claude/
+
+# Material de design (export do Wordeck) — fica fora do versionamento
+design/
+frontend/wordeck-design.zip
