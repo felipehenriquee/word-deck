@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Montserrat vem do @fontsource (importado em main.tsx); a variável fica no <html>
+     e é a fonte `sans` padrão do tema (tailwind.config.ts). */
+  html {
+    --font-montserrat: 'Montserrat';
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-white font-sans font-medium text-ink antialiased;
+  }
+}
